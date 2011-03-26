@@ -4,13 +4,7 @@
 
 def notice(text)
   puts
-  print "+"
-  print "-" * 38
-  puts  "+"
-  puts "|#{"Installing #{text}".center(38)}|"
-  print "+"
-  print "-" * 38
-  puts  "+"
+  puts " Installing #{text} ".center(40, '=')
   puts
 end
 
