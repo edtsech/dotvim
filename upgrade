@@ -1,0 +1,7 @@
+#! /usr/bin/ruby
+
+unless `git pull` == "Already up-to-date.\n"
+  `git clean -dfx`
+  `git pull`
+  `rake`
+end
