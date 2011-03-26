@@ -1,3 +1,0 @@
-git clean -dfx
-git pull
-rake

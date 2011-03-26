@@ -1,7 +1,5 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env sh
+git clean -dfx
+git pull
+rake
 
-unless `git pull` == "Already up-to-date.\n"
-  `git clean -dfx`
-  `git pull`
-  `rake`
-end
