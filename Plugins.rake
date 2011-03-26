@@ -25,8 +25,7 @@ plugin "syntastic",        "git://github.com/scrooloose/syntastic.git"
 plugin "scala",            "git://github.com/bdd/vim-scala.git"
 plugin "gist-vim",         "git://github.com/mattn/gist-vim.git"
 plugin "command_t",        "git://github.com/wincent/Command-T.git" do
-  sh "cd bundle/command_t/ruby/command-t/"
-  sh "ruby extconf.rb"
+  sh "cd bundle/command_t/ruby/command-t/ && ruby extconf.rb && make clean && make"
 end
 
 color  "molokai",          "https://github.com/mrtazz/molokai.vim/raw/master/colors/molokai.vim"
