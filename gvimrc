@@ -15,7 +15,7 @@ autocmd BufReadPost *
 " Look and Feel
 "
 
-color bclear
+color molokai
 set guifont=Monaco:h12
 
 "
