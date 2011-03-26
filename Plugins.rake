@@ -24,7 +24,10 @@ plugin "vim-coffee-script","git://github.com/kchmck/vim-coffee-script.git"
 plugin "syntastic",        "git://github.com/scrooloose/syntastic.git"
 plugin "scala",            "git://github.com/bdd/vim-scala.git"
 plugin "gist-vim",         "git://github.com/mattn/gist-vim.git"
-plugin "command_t",        "git://github.com/wincent/Command-T.git"
+plugin "command_t",        "git://github.com/wincent/Command-T.git" do
+  sh "cd bundle/command_t/ruby/command-t/"
+  sh "ruby extconf.rb"
+end
 
 color  "molokai",          "https://github.com/mrtazz/molokai.vim/raw/master/colors/molokai.vim"
 color  "vwilight",         "https://gist.github.com/raw/796172/724c7ca237a7f6b8d857c4ac2991cfe5ffb18087/vwilight.vim"
