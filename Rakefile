@@ -21,6 +21,8 @@ def plugin(name, source)
   if source =~ /git$/
     sh "git clone #{source} #{dir}"
   end
+
+  yield if block_given?
 end
 
 desc "Create symlinks"
