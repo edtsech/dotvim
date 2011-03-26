@@ -27,7 +27,7 @@ end
 
 desc "Create symlinks"
 task :create_symlinks do
-  %w[ gvimrc ].each do |file|
+  %w[ vimrc ].each do |file|
     dest = File.expand_path("~/.#{file}")
     unless File.exist?(dest)
       ln_s(File.expand_path("../#{file}", __FILE__), dest)
