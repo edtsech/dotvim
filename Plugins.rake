@@ -24,6 +24,8 @@ plugin "vim-coffee-script","git://github.com/kchmck/vim-coffee-script.git"
 plugin "syntastic",        "git://github.com/scrooloose/syntastic.git"
 plugin "scala",            "git://github.com/bdd/vim-scala.git"
 plugin "gist-vim",         "git://github.com/mattn/gist-vim.git"
+plugin "zencoding",        "git://github.com/mattn/zencoding-vim.git"
+plugin "minibufexpl",      "git://github.com/fholgado/minibufexpl.vim.git"
 plugin "command_t",        "git://github.com/wincent/Command-T.git" do
   sh "cd bundle/command_t/ruby/command-t/ && ruby extconf.rb && make clean && make"
 end
