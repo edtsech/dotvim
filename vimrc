@@ -34,6 +34,9 @@ set guioptions-=l
 set guioptions-=R
 set guioptions-=r
 
+" Show numbers
+set number
+
 "
 " Shortcuts
 "
