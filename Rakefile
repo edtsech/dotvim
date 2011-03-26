@@ -4,9 +4,13 @@
 
 def notice(text)
   puts
-  puts "*" * 40
-  puts "*#{"Installing #{text}".center(38)}*"
-  puts "*" * 40
+  print "+"
+  print "-" * 38
+  puts  "+"
+  puts "|#{"Installing #{text}".center(38)}|"
+  print "+"
+  print "-" * 38
+  puts  "+"
   puts
 end
 
