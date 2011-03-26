@@ -36,6 +36,6 @@ task :create_symlinks do
 end
 
 # Install plugins
-import(File.expand_path("Plugins.rake"))
+import(File.expand_path("Vimfile"))
 
 task :default => [:create_symlinks]
