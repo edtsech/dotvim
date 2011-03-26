@@ -8,3 +8,7 @@ Inspired by [Janus](https://github.com/carlhuda/janus)
 1. `git clone git://github.com/edtsech/tap-tap.git ~/.vim`
 2. `cd ~/.vim`
 3. `rake`
+
+## Vimfile
+
+`:cal SetSyn("ruby")`
