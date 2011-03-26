@@ -23,7 +23,11 @@ autocmd BufReadPost *
 "
 
 color molokai
-set guifont=Monaco:h12
+" set guifont=Monaco:h12
+
+" Start without the toolbar
+set guioptions-=T
+
 
 "
 " Shortcuts
