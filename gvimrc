@@ -60,4 +60,9 @@ map <Leader>N :set number<CR>
 imap <D-d> :NERDTreeToggle<CR>
 nmap <D-d> :NERDTreeToggle<CR>
 
-
+"
+" Pathogen
+"
+filetype off
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()

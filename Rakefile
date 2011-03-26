@@ -1,5 +1,6 @@
 `mkdir colors`
 `mkdir bundle`
+`rm -rf bundle`
 
 def notice(text)
   puts
@@ -18,14 +19,10 @@ def plugin(name, source)
   notice(name)
 
   dir = File.expand_path("bundle/#{name}")
+
   if source =~ /git$/
     sh "git clone #{source} #{dir}"
   end
-end
-
-desc "Init Tap-Tap"
-task :init do
-  # init
 end
 
 desc "Create symlinks"
@@ -41,4 +38,4 @@ end
 # Install plugins
 import(File.expand_path("Plugins.rake"))
 
-task :default => [:init]
+task :default => [:create_symlinks]
