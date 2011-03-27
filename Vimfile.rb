@@ -15,7 +15,7 @@ plugin "snipmate",         "git://github.com/msanders/snipmate.vim.git"
 plugin "markdown",         "git://github.com/tpope/vim-markdown.git"
 plugin "endwise",          "git://github.com/tpope/vim-endwise.git"
 plugin "apidock.com",      "git://github.com/alexandrov/apidock.vim.git"
-plugin "railsapi",         "git://github.com:edtsech/vim-railsapi.git"
+plugin "railsapi",         "git://github.com/edtsech/vim-railsapi.git"
 
 plugin "command_t",        "git://github.com/wincent/Command-T.git" do
   sh "cd bundle/command_t/ruby/command-t/ && ruby extconf.rb && make clean && make"
