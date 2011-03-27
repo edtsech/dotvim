@@ -44,8 +44,8 @@ set incsearch
 set ignorecase
 set smartcase
 
-set backup                     " Enable creation of backup file.
-set backupdir=~/.vim/backups   " Where backups will go.
+" set backup                     " Enable creation of backup file.
+" set backupdir=~/.vim/backups   " Where backups will go.
 set directory=~/.vim/tmp       " Where temporary files will go.
 
 set noswapfile
@@ -155,6 +155,9 @@ map <D-M-Right> <C-w>l
 imap <D-M-Right> <Esc> <C-w>l
 map <D-M-Left> <C-w>h
 imap <D-M-Left> <C-w>h
+
+" Markdown preview
+map <leader>p :Mm<CR>
 
 " Adjust viewports to the same size
 map <Leader>= <C-w>=
