@@ -116,8 +116,8 @@ while i<=9
 endwhile
 
 " Move block of text
-vmap <C-j> :m'>+<CR>gv=`<my`>mzgv`yo`z
 vmap <C-k> :m'<-2<CR>gv=`>my`<mzgv`yo`z
+vmap <C-j> :m'>+<CR>gv=`<my`>mzgv`yo`z
 
 " Toggle relativenumber option
 map <Leader>n :set relativenumber<CR>
@@ -143,8 +143,8 @@ map <Leader><Leader> :ZoomWin<CR>
 map <D-/> <plug>NERDCommenterToggle<CR>
 
 " Command-][ to increase/decrease indentation
-map <D-]> >gv
-map <D-[> <gv
+vmap <D-]> >gv
+vmap <D-[> <gv
 
 " Command-Option-ArrowKey to switch viewports
 map <D-M-Up> <C-w>k
