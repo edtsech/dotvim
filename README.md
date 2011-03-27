@@ -1,6 +1,6 @@
 # Tap-Tap
 
-Inspired by [Janus](https://github.com/carlhuda/janus)
+Inspired by [https://github.com/carlhuda/janus](https://github.com/carlhuda/janus) and [https://github.com/kossnocorp/point](https://github.com/kossnocorp/point)
 
 ## Installation
 
