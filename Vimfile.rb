@@ -30,5 +30,5 @@ plugin "command_t",        "git://github.com/wincent/Command-T.git" do
   sh "cd bundle/command_t/ruby/command-t/ && ruby extconf.rb && make clean && make"
 end
 
-color  "molokai",          "https://github.com/mrtazz/molokai.vim/raw/master/colors/molokai.vim"
-color  "vwilight",         "https://gist.github.com/raw/796172/724c7ca237a7f6b8d857c4ac2991cfe5ffb18087/vwilight.vim"
+# color  "molokai",          "https://github.com/mrtazz/molokai.vim/raw/master/colors/molokai.vim"
+# color  "vwilight",         "https://gist.github.com/raw/796172/724c7ca237a7f6b8d857c4ac2991cfe5ffb18087/vwilight.vim"
