@@ -143,8 +143,8 @@ map <Leader><Leader> :ZoomWin<CR>
 map <D-/> <plug>NERDCommenterToggle<CR>
 
 " Command-][ to increase/decrease indentation
-vmap <D-]> >gv
-vmap <D-[> <gv
+map <D-]> >gv
+map <D-[> <gv
 
 " Command-Option-ArrowKey to switch viewports
 map <D-M-Up> <C-w>k
