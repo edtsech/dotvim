@@ -5,6 +5,7 @@ filetype off
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
+autocmd BufWrite * call RemoveTrailingSpacesOnBufRead()
 
 "============ Basics ============"
 
@@ -184,5 +185,15 @@ function s:UpdateNERDTree(...)
 
   if exists(":CommandTFlush") == 2
     CommandTFlush
+  endif
+endfunction
+
+function! RemoveTrailingSpaces()
+  | :%s/\s\+$//e |
+endfunction
+
+function! RemoveTrailingSpacesOnBufRead()
+  if &modifiable
+    call RemoveTrailingSpaces()
   endif
 endfunction
