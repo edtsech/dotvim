@@ -1,13 +1,12 @@
-"
-" Pathogen
-"
+
+"============ Pathogen ============"
+
 filetype off
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
-"
-" Autocommands
-"
+
+"============ Autocommands ============"
 
 " Switch to normal mode after save
 autocmd BufWrite * stopinsert
@@ -18,9 +17,8 @@ autocmd BufReadPost *
      \   exe "normal! g`\"" |
      \ endif
 
-"
-" Look and Feel
-"
+
+"============ Look and Feel ============"
 
 color molokai
 set guifont=Monaco:h12
@@ -37,9 +35,20 @@ set guioptions-=r
 " Show numbers
 set number
 
-"
-" Shortcuts
-"
+" Tab size
+set ts=2
+set shiftwidth=2        " Make indent equal 2 spaces
+set ai                  " Auto indent to current level
+set si                  " Smart indent
+set stal=2
+set expandtab           " No tabs, no war!
+
+filetype on
+filetype plugin on
+filetype indent on
+
+
+"============ Shortcuts ============"
 
 " Previous - Next buffer
 map <C-S-Left> :bprev<CR>
@@ -47,6 +56,8 @@ map <C-S-Right> :bnext<CR>
 map <D-M-Left> :tabprev<CR>
 map <D-M-Right> :tabnext<CR>
 
+""" Ctrl+L to clear highlight
+nnoremap <Leader>c :nohls<CR><C-L>
 
 " Navigate between windows
 map <C-h> <C-w>h
@@ -71,9 +82,8 @@ vmap <C-k> :m'<-2<CR>gv=`>my`<mzgv`yo`z
 map <Leader>n :set relativenumber<CR>
 map <Leader>N :set number<CR>
 
-"
-" Plugins config
-"
+
+"============ Plugins config ============"
 
 " Ctrl+D map to toggle NERDTree
 imap <D-d> :NERDTreeToggle<CR>
