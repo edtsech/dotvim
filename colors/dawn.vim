@@ -48,7 +48,7 @@ hi Special  guifg=#080808 guibg=NONE gui=NONE
 hi SpecialKey  guifg=#a2a2b8 guibg=#dfe7eb gui=NONE
 hi Statement  guifg=#794938 guibg=NONE gui=NONE
 hi StorageClass  guifg=#a71d5d guibg=NONE gui=italic
-hi String  guifg=#006633 guibg=NONE gui=NONE
+hi String  guifg=NONE guibg=NONE gui=NONE
 hi Tag  guifg=#bf4f24 guibg=NONE gui=NONE
 hi Title  guifg=#080808 guibg=NONE gui=bold
 hi Todo  guifg=#5a525f guibg=NONE gui=inverse,bold,italic
