@@ -98,7 +98,7 @@ map <C-S-Right> :bnext<CR>
 map <D-M-Left> :tabprev<CR>
 map <D-M-Right> :tabnext<CR>
 
-""" Ctrl+L to clear highlight
+" Clear highlight
 nnoremap <Leader>c :nohls<CR><C-L>
 
 " Navigate between windows
@@ -127,7 +127,7 @@ map <Leader>N :set number<CR>
 
 "============ Plugins config ============"
 
-" Ctrl+D map to toggle NERDTree
+" Cmd+D map to toggle NERDTree
 imap <D-d> :NERDTreeToggle<CR>
 nmap <D-d> :NERDTreeToggle<CR>
 
@@ -135,7 +135,7 @@ nmap <D-d> :NERDTreeToggle<CR>
 let NERDTreeIgnore=['\.rbc$', '\~$']
 
 " Command-T configuration
-let g:CommandTMaxHeight=20
+let g:CommandTMaxHeight=10
 
 " ZoomWin configuration
 map <Leader><Leader> :ZoomWin<CR>
