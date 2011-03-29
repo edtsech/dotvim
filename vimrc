@@ -92,6 +92,11 @@ vmap <C-Down> ]egv
 
 "============ Shortcuts ============"
 
+" Create splits
+nmap <Leader>v :vsplit <cr>
+nmap <Leader>h :split <cr>
+
+
 " Previous - Next buffer
 map <C-S-Left> :bprev<CR>
 map <C-S-Right> :bnext<CR>
