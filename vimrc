@@ -122,6 +122,8 @@ while i<=9
 endwhile
 
 " Move block of text
+vmap <C-h> <gv
+vmap <C-l> >gv
 vmap <C-k> :m'<-2<CR>gv=`>my`<mzgv`yo`z
 vmap <C-j> :m'>+<CR>gv=`<my`>mzgv`yo`z
 
