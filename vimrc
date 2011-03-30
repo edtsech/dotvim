@@ -26,6 +26,11 @@ set softtabstop=2
 set expandtab
 set list listchars=tab:\ \ ,trail:·
 
+
+set cindent
+" set smartindent
+" set autoindent
+
 " Tab completion
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
