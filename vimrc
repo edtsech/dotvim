@@ -28,8 +28,8 @@ set list listchars=tab:\ \ ,trail:·
 
 
 set cindent
-" set smartindent
-" set autoindent
+set smartindent
+set autoindent
 
 " Tab completion
 set wildmode=list:longest,list:full
