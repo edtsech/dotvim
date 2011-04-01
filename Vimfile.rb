@@ -31,7 +31,7 @@ plugin "vim-coffee-script","git://github.com/kchmck/vim-coffee-script.git"
 plugin "syntastic",        "git://github.com/scrooloose/syntastic.git"
 plugin "scala",            "git://github.com/bdd/vim-scala.git"
 plugin "gist-vim",         "git://github.com/mattn/gist-vim.git"
-plugin "solarized",        "git clone git://github.com/altercation/vim-colors-solarized.git"
+plugin "solarized",        "git://github.com/altercation/vim-colors-solarized.git"
 
 # plugin "zencoding",        "git://github.com/mattn/zencoding-vim.git"
 # plugin "minibufexpl",      "git://github.com/fholgado/minibufexpl.vim.git"
