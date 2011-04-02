@@ -145,6 +145,7 @@ let NERDTreeIgnore=['\.rbc$', '\~$']
 
 " Command-T configuration
 let g:CommandTMaxHeight=10
+map <D-e> :CommandT<CR>
 
 " ZoomWin configuration
 map <Leader><Leader> :ZoomWin<CR>
