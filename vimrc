@@ -133,6 +133,9 @@ map <Leader>N :set number<CR>
 
 "============ Plugins config ============"
 
+" Ack config
+noremap <Leader>a :Ack <cword><CR>
+
 " Cmd+D map to toggle NERDTree
 imap <D-d> :NERDTreeToggle<CR>
 nmap <D-d> :NERDTreeToggle<CR>
