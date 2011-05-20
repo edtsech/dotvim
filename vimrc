@@ -120,11 +120,19 @@ while i<=9
   let i+=1
 endwhile
 
+" TextMate like indenting
+imap <D-[> <ESC><<
+imap <D-]> <ESC>>>
+nmap <D-[> <<
+nmap <D-]> >>
+vmap <D-[> <gv
+vmap <D-]> >gv
+
 " Move block of text
-vmap <C-h> <gv
-vmap <C-l> >gv
-vmap <C-k> :m'<-2<CR>gv=`>my`<mzgv`yo`z
-vmap <C-j> :m'>+<CR>gv=`<my`>mzgv`yo`z
+"vmap <C-h> <gv
+"vmap <C-l> >gv
+"vmap <C-k> :m'<-2<CR>gv=`>my`<mzgv`yo`z
+"vmap <C-j> :m'>+<CR>gv=`<my`>mzgv`yo`z
 
 " Toggle relativenumber option
 map <Leader>n :set relativenumber<CR>
