@@ -31,7 +31,6 @@ plugin "syntastic",        "git://github.com/scrooloose/syntastic.git"
 plugin "scala",            "git://github.com/bdd/vim-scala.git"
 plugin "gist-vim",         "git://github.com/mattn/gist-vim.git"
 plugin "solarized",        "git://github.com/altercation/vim-colors-solarized.git"
-plugin "KLS",              "git://github.com/porqz/KeyboardLayoutSwitcher.git"
 
 # plugin "zencoding",        "git://github.com/mattn/zencoding-vim.git"
 # plugin "minibufexpl",      "git://github.com/fholgado/minibufexpl.vim.git"

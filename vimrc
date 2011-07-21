@@ -182,9 +182,6 @@ imap <D-M-Left> <C-w>h
 " Markdown preview
 map <leader>p :Mm<CR>
 
-" Keyboard Layout Switcher
-let g:kls_insertEnterRestoresLast = 1
-
 " Adjust viewports to the same size
 map <Leader>= <C-w>=
 imap <Leader>= <Esc> <C-w>=
@@ -225,5 +222,5 @@ endfunction
 
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,*.pill,*.prawn,*.rabl}    set ft=ruby
+au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,*.pill,*.prawn,*.rabl,*.jam}    set ft=ruby
 
