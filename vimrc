@@ -87,6 +87,7 @@ autocmd BufReadPost *
 
 "============ Look and Feel ============"
 
+color Tomorrow
 set guifont=Monaco:h12
 
 " Start without the toolbar
