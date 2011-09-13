@@ -157,10 +157,6 @@ let NERDTreeIgnore=['\.rbc$', '\~$']
 let g:CommandTMaxHeight=10
 map <D-e> :CommandT<CR>
 
-" Command-][ to increase/decrease indentation
-vmap <D-]> >gv
-vmap <D-[> <gv
-
 " NERDTree utility function
 function s:UpdateNERDTree(...)
   let stay = 0
