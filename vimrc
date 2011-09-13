@@ -14,7 +14,10 @@ Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'tpope/vim-endwise'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-unimpaired'
 Bundle 'pangloss/vim-javascript'
+Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'tpope/vim-commentary'
 
 filetype plugin indent on     " required!
 "
@@ -47,7 +50,6 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set list listchars=tab:\ \ ,trail:·
-
 
 set cindent
 set smartindent
@@ -117,13 +119,6 @@ vmap <C-Down> ]egv
 nmap <Leader>v :vsplit <cr>
 nmap <Leader>h :split <cr>
 
-
-" Previous - Next buffer
-map <C-S-Left> :bprev<CR>
-map <C-S-Right> :bnext<CR>
-map <D-M-Left> :tabprev<CR>
-map <D-M-Right> :tabnext<CR>
-
 " Clear highlight
 nnoremap <Leader>c :nohls<CR><C-L>
 
@@ -132,15 +127,6 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-
-" Add Firefox-like tab navigation
-let i=1
-while i<=9
-  execute "nmap <D-".i."> ".i."gt"
-  execute "vmap <D-".i."> ".i."gt"
-  execute "imap <D-".i."> <ESC>".i."gt"
-  let i+=1
-endwhile
 
 " TextMate like indenting
 imap <D-[> <ESC><<
@@ -181,12 +167,6 @@ let NERDTreeIgnore=['\.rbc$', '\~$']
 let g:CommandTMaxHeight=10
 map <D-e> :CommandT<CR>
 
-" ZoomWin configuration
-map <Leader><Leader> :ZoomWin<CR>
-
-" Command-/ to toggle comments
-map <D-/> <plug>NERDCommenterToggle<CR>
-
 " Command-][ to increase/decrease indentation
 vmap <D-]> >gv
 vmap <D-[> <gv
@@ -200,13 +180,6 @@ map <D-M-Right> <C-w>l
 imap <D-M-Right> <Esc> <C-w>l
 map <D-M-Left> <C-w>h
 imap <D-M-Left> <C-w>h
-
-" Markdown preview
-map <leader>p :Mm<CR>
-
-" Adjust viewports to the same size
-map <Leader>= <C-w>=
-imap <Leader>= <Esc> <C-w>=
 
 " NERDTree utility function
 function s:UpdateNERDTree(...)
