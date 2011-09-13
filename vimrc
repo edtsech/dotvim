@@ -1,15 +1,37 @@
+set nocompatible               " be iMproved
+filetype off                   " required!
 
-"============ Pathogen ============"
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-filetype off
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+" let Vundle manage Vundle
+" required!
+Bundle 'gmarik/vundle'
+Bundle 'mileszs/ack.vim'
+Bundle 'rails.vim'
+Bundle 'wycats/nerdtree'
+Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'tpope/vim-endwise'
+Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-surround'
+Bundle 'pangloss/vim-javascript'
 
-autocmd BufWrite * call RemoveTrailingSpacesOnBufRead()
+filetype plugin indent on     " required!
+"
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install(update) bundles
+" :BundleSearch(!) foo - search(or refresh cache first) for foo
+" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle command are not allowed..
+"
+"
 
 "============ Basics ============"
 
-set nocompatible " Turn off vi compatible
+autocmd BufWrite * call RemoveTrailingSpacesOnBufRead()
 
 set number
 set ruler
@@ -65,7 +87,6 @@ autocmd BufReadPost *
 
 "============ Look and Feel ============"
 
-color tango
 set guifont=Monaco:h12
 
 " Start without the toolbar
