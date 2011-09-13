@@ -136,16 +136,6 @@ nmap <D-]> >>
 vmap <D-[> <gv
 vmap <D-]> >gv
 
-""" Rails.vim
-" autocmd User Rails.javascript* set expandtab ts=4 sw=4 sts=4
-" autocmd User Rails/*/.coffee set expandtab ts=2 sw=2 sts=2
-
-" Move block of text
-"vmap <C-h> <gv
-"vmap <C-l> >gv
-"vmap <C-k> :m'<-2<CR>gv=`>my`<mzgv`yo`z
-"vmap <C-j> :m'>+<CR>gv=`<my`>mzgv`yo`z
-
 " Toggle relativenumber option
 map <Leader>n :set relativenumber<CR>
 map <Leader>N :set number<CR>
