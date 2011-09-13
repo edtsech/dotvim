@@ -155,7 +155,6 @@ let NERDTreeIgnore=['\.rbc$', '\~$']
 
 " Command-T configuration
 let g:CommandTMaxHeight=10
-map <D-e> :CommandT<CR>
 
 " NERDTree utility function
 function s:UpdateNERDTree(...)
