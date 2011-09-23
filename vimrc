@@ -14,10 +14,12 @@ Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'tpope/vim-endwise'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'pangloss/vim-javascript'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'tpope/vim-commentary'
+Bundle 'altercation/vim-colors-solarized'
 
 filetype plugin indent on     " required!
 "
