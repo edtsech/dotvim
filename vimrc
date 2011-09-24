@@ -130,6 +130,15 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Add Firefox-like tab navigation
+let i=1
+while i<=9
+  execute "nmap <D-".i."> ".i."gt"
+  execute "vmap <D-".i."> ".i."gt"
+  execute "imap <D-".i."> <ESC>".i."gt"
+  let i+=1
+endwhile
+
 " TextMate like indenting
 imap <D-[> <ESC><<
 imap <D-]> <ESC>>>
@@ -157,6 +166,7 @@ let NERDTreeIgnore=['\.rbc$', '\~$']
 
 " Command-T configuration
 let g:CommandTMaxHeight=10
+map <D-e> :CommandT<CR>
 
 " NERDTree utility function
 function s:UpdateNERDTree(...)
