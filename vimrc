@@ -21,6 +21,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'tpope/vim-commentary'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'kchmck/vim-coffee-script'
 
 filetype plugin indent on     " required!
 "
