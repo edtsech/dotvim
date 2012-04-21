@@ -46,8 +46,6 @@ filetype plugin indent on     " required!
 
 " BASICS
 
-  autocmd BufWrite * call RemoveTrailingSpacesOnBufRead()
-
   set number
   set ruler
   syntax on
@@ -179,9 +177,12 @@ filetype plugin indent on     " required!
   map <Leader>n :set relativenumber<CR>
   map <Leader>N :set number<CR>
 
+  " Fix Trailing White Space
+  map <leader>ts :%s/\s\+$//e<CR>
+
 " PLUGINS
 
-  " Ack config
+  " Search work under cursor with Ack
   noremap <Leader>a :Ack <cword><CR>
 
   " Cmd+D map to toggle NERDTree
