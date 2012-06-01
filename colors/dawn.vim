@@ -100,3 +100,8 @@ hi cssClassName  guifg=#bf4f24 guibg=NONE gui=NONE
 hi cssValueLength  guifg=#811f24 guibg=NONE gui=bold
 hi cssCommonAttr  guifg=#b4371f guibg=NONE gui=NONE
 hi cssBraces  guifg=NONE guibg=NONE gui=NONE
+
+hi clojureParen0 guifg=#999999 guibg=NONE gui=NONE
+hi clojureSexpLevel0 guifg=#234A97 guibg=NONE gui=NONE
+hi clojureSexpLevel1 guifg=#234A97 guibg=NONE gui=NONE
+

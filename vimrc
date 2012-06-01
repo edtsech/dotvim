@@ -1,5 +1,5 @@
 " Vundle setup
-  set nocompatible               " be iMproved
+  set nocompatible
   filetype off                   " required!
 
   set rtp+=~/.vim/bundle/vundle/
@@ -25,6 +25,9 @@
   " Themes
     Bundle 'altercation/vim-colors-solarized'
 
+  " Git
+    Bundle 'tpope/vim-fugitive'
+
   " Languages & Technologies
   "
     " Rails
@@ -41,6 +44,9 @@
 
     " Scala
       Bundle 'rosstimson/scala-vim-support'
+
+    " Clojure
+      Bundle 'vim-scripts/VimClojure'
 
 filetype plugin indent on     " required!
 
@@ -195,4 +201,13 @@ filetype plugin indent on     " required!
   " Command-T configuration
   let g:CommandTMaxHeight=10
   map <D-e> :CommandT<CR>
+
+  " Show syntax highlighting groups for word under cursor
+  nmap <C-S-P> :call <SID>SynStack()<CR>
+  function! <SID>SynStack()
+    if !exists("*synstack")
+      return
+    endif
+    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+  endfunc
 
