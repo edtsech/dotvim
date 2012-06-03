@@ -104,4 +104,5 @@ hi cssBraces  guifg=NONE guibg=NONE gui=NONE
 hi clojureParen0 guifg=#999999 guibg=NONE gui=NONE
 hi clojureSexpLevel0 guifg=#234A97 guibg=NONE gui=NONE
 hi clojureSexpLevel1 guifg=#234A97 guibg=NONE gui=NONE
+hi clojureSpecial guifg=#A71D5D guibg=NONE gui=NONE
 
