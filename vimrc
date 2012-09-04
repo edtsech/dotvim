@@ -1,3 +1,4 @@
+
 " Vundle setup
   set nocompatible
   filetype off                   " required!
@@ -24,9 +25,6 @@
 
   " Themes
     Bundle 'altercation/vim-colors-solarized'
-
-  " Git
-    Bundle 'tpope/vim-fugitive'
 
   " Languages & Technologies
   "
@@ -55,6 +53,9 @@ filetype plugin indent on     " required!
   set number
   set ruler
   syntax on
+
+  " Beeps
+  set noerrorbells
 
   " Set encoding
   set encoding=utf-8
@@ -99,8 +100,8 @@ filetype plugin indent on     " required!
 
 " INTERFACE
 
-  color Dawn
-  set guifont=Anonymous\ Pro:h13
+  color Tomorrow
+  set guifont=Monaco:h13
 
   " Start without the toolbar
   set guioptions-=T
@@ -210,4 +211,9 @@ filetype plugin indent on     " required!
     endif
     echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
   endfunc
+
+  " Settings for VimClojure
+  let vimclojure#HighlightBuiltins=1
+  " let vimclojure#HighlightContrib=1
+  let vimclojure#ParenRainbow=1
 
