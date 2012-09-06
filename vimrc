@@ -172,14 +172,6 @@ filetype plugin indent on     " required!
   map <C-k> <C-w>k
   map <C-l> <C-w>l
 
-  " TextMate like indenting
-  imap <D-[> <ESC><<
-  imap <D-]> <ESC>>>
-  nmap <D-[> <<
-  nmap <D-]> >>
-  vmap <D-[> <gv
-  vmap <D-]> >gv
-
   " Toggle relativenumber option
   map <Leader>n :set relativenumber<CR>
   map <Leader>N :set number<CR>
