@@ -173,8 +173,8 @@ filetype plugin indent on     " required!
   noremap <Leader>a :Ack <cword><CR>
 
   " Cmd+D map to toggle NERDTree
-  imap <D-d> :NERDTreeToggle<CR>
-  nmap <D-d> :NERDTreeToggle<CR>
+  imap <Leader>d :NERDTreeToggle<CR>
+  nmap <Leader>d :NERDTreeToggle<CR>
 
   " NERDTree configuration
   let NERDTreeIgnore=['\.rbc$', '\~$']
