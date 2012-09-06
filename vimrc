@@ -112,18 +112,6 @@ filetype plugin indent on     " required!
   set guioptions-=R
   set guioptions-=r
 
-  " Show numbers
-  set number
-
-  " Unimpaired configuration
-  " Bubble single lines
-  nmap <C-Up> [e
-  nmap <C-Down> ]e
-
-  " Bubble multiple lines
-  vmap <C-Up> [egv
-  vmap <C-Down> ]egv
-
   " Disable <Arrow keys>
   inoremap <Up> <NOP>
   inoremap <Down> <NOP>
