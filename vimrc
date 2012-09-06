@@ -184,13 +184,13 @@ filetype plugin indent on     " required!
   map <D-e> :CommandT<CR>
 
   " Show syntax highlighting groups for word under cursor
-  nmap <C-S-P> :call <SID>SynStack()<CR>
-  function! <SID>SynStack()
-    if !exists("*synstack")
-      return
-    endif
-    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-  endfunc
+  " nmap <C-S-P> :call <SID>SynStack()<CR>
+  " function! <SID>SynStack()
+  "   if !exists("*synstack")
+  "     return
+  "   endif
+  "   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+  " endfunc
 
   " Settings for VimClojure
   let vimclojure#HighlightBuiltins=1
