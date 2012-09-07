@@ -54,9 +54,6 @@ filetype plugin indent on     " required!
   set ruler
   syntax on
 
-  " Beeps
-  set noerrorbells
-
   " Set encoding
   set encoding=utf-8
 
@@ -103,15 +100,6 @@ filetype plugin indent on     " required!
   color Tomorrow
   set guifont=Monaco:h13
 
-  " Start without the toolbar
-  set guioptions-=T
-  set guioptions-=L
-
-  " Remove scrolls
-  set guioptions-=l
-  set guioptions-=R
-  set guioptions-=r
-
   " Disable <Arrow keys>
   inoremap <Up> <NOP>
   inoremap <Down> <NOP>
@@ -144,8 +132,11 @@ filetype plugin indent on     " required!
 
 " SHORTCUTS
 
+  " Save file
+  nmap <Leader>s :w <cr>
+
   " Open .vimrc in a new tab
-  nmap <leader>vc :tabedit $MYVIMRC<CR>
+  nmap <Leader>vc :tabedit $MYVIMRC<CR>
 
   " Create splits
   nmap <Leader>v :vsplit <cr>
