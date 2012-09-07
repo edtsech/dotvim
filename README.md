@@ -6,5 +6,7 @@
 4. `cd ~/.vim`
 5. `rake`
 6. launch `vim` and run `:BundleInstall`
-7. `cd ~/.vim/bundle/command-t`
-8. `rake make`
+
+## Compile CommandT
+1. `cd ~/.vim/bundle/command-t`
+2. `rake make`
