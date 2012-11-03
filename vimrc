@@ -11,6 +11,7 @@
   Bundle 'gmarik/vundle'
 
   " Vim
+    Bundle 'Lokaltog/vim-powerline'
     Bundle 'markabe/bufexplorer'
     Bundle 'mileszs/ack.vim'
     Bundle 'wycats/nerdtree'
@@ -22,6 +23,7 @@
     Bundle 'tpope/vim-unimpaired'
     Bundle 'michaeljsmith/vim-indent-object'
     Bundle 'tpope/vim-commentary'
+    Bundle 'bbommarito/vim-slim'
 
   " Themes
     Bundle 'altercation/vim-colors-solarized'
@@ -97,6 +99,7 @@ filetype plugin indent on     " required!
 
 " INTERFACE
 
+  set t_Co=256
   color Tomorrow
   set guifont=Monaco:h13
 
@@ -118,6 +121,7 @@ filetype plugin indent on     " required!
 
   " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
   au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru,*.pill,*.prawn,*.rabl,*.jam}    set ft=ruby
+  au BufRead,BufNewFile {*.cljs}    set ft=clojure
 
 " AUTOCOMANDS
 "
@@ -175,16 +179,16 @@ filetype plugin indent on     " required!
   map <D-e> :CommandT<CR>
 
   " Show syntax highlighting groups for word under cursor
-  " nmap <C-S-P> :call <SID>SynStack()<CR>
-  " function! <SID>SynStack()
-  "   if !exists("*synstack")
-  "     return
-  "   endif
-  "   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-  " endfunc
+  nmap <C-S-P> :call <SID>SynStack()<CR>
+  function! <SID>SynStack()
+    if !exists("*synstack")
+      return
+    endif
+    echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+  endfunc
 
   " Settings for VimClojure
   let vimclojure#HighlightBuiltins=1
-  " let vimclojure#HighlightContrib=1
+  let vimclojure#HighlightContrib=1
   let vimclojure#ParenRainbow=1
 
