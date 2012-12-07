@@ -11,7 +11,7 @@
   Bundle 'gmarik/vundle'
 
   " Vim
-    Bundle 'Lokaltog/vim-powerline'
+    " Bundle 'Lokaltog/vim-powerline'
     Bundle 'markabe/bufexplorer'
     Bundle 'mileszs/ack.vim'
     Bundle 'wycats/nerdtree'
@@ -24,6 +24,7 @@
     Bundle 'michaeljsmith/vim-indent-object'
     Bundle 'tpope/vim-commentary'
     Bundle 'bbommarito/vim-slim'
+    Bundle 'scrooloose/syntastic'
 
   " Themes
     Bundle 'altercation/vim-colors-solarized'
