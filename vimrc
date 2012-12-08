@@ -25,6 +25,7 @@
     Bundle 'tpope/vim-commentary'
     Bundle 'bbommarito/vim-slim'
     Bundle 'scrooloose/syntastic'
+    Bundle 'vim-scripts/paredit.vim'
 
   " Themes
     Bundle 'altercation/vim-colors-solarized'
@@ -49,7 +50,7 @@
     " Clojure
       Bundle 'vim-scripts/VimClojure'
 
-filetype plugin indent on     " required!
+  filetype on
 
 " BASICS
 
@@ -101,7 +102,6 @@ filetype plugin indent on     " required!
 " INTERFACE
 
   set t_Co=256
-  color Tomorrow
   set guifont=Monaco:h13
 
   " Disable <Arrow keys>
@@ -189,6 +189,7 @@ filetype plugin indent on     " required!
   endfunc
 
   " Settings for VimClojure
+  let g:paredit_mode=1
   let vimclojure#HighlightBuiltins=1
   let vimclojure#HighlightContrib=1
   let vimclojure#ParenRainbow=1
