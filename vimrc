@@ -26,6 +26,7 @@
     Bundle 'bbommarito/vim-slim'
     Bundle 'scrooloose/syntastic'
     Bundle 'vim-scripts/paredit.vim'
+    Bundle 'gorkunov/smartpairs.vim'
 
   " Themes
     Bundle 'altercation/vim-colors-solarized'
@@ -103,6 +104,7 @@
 
   set t_Co=256
   set guifont=Monaco:h13
+  color Tomorrow-Night-Eighties
 
   " Disable <Arrow keys>
   inoremap <Up> <NOP>
@@ -188,9 +190,33 @@
     echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
   endfunc
 
-  " Settings for VimClojure
-  let g:paredit_mode=1
-  let vimclojure#HighlightBuiltins=1
-  let vimclojure#HighlightContrib=1
-  let vimclojure#ParenRainbow=1
+  " VimCLojure
+
+    " Set local leader to comma
+    let maplocalleader=","
+
+    " Automatically determine indenting using fuzzy matching. e.g. the a line starting "(with-"
+    " will be indented two spaces.
+    let vimclojure#FuzzyIndent=1
+
+    " Highlight built-in functions from clojure.core and friends
+    let vimclojure#HighlightBuiltins=1
+
+    " Highlight functions from contrib
+    let vimclojure#HighlightContrib=1
+
+    " As new symbols are identified using VimClojure's dynamic features, automatically
+    " highlight them.
+    let vimclojure#DynamicHighlighting=1
+
+    " Color parens so they're easier to match visually
+    let vimclojure#ParenRainbow=1
+
+    " Yes, I want nailgun support
+    let vimclojure#WantNailgun = 1
+
+    " Full path to the nailgun client
+    let vimclojure#NailgunClient = "/usr/local/bin/ng"
+
+    let g:paredit_mode=1
 
