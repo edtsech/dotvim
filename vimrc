@@ -16,6 +16,7 @@
     Bundle 'mileszs/ack.vim'
     Bundle 'wycats/nerdtree'
     Bundle 'git://git.wincent.com/command-t.git'
+    " Bundle 'git://bitbucket.org/ns9tks/vim-fuzzyfinder.git'
     Bundle 'tpope/vim-endwise'
     Bundle 'ervandew/supertab'
     Bundle 'tpope/vim-surround'
@@ -27,6 +28,10 @@
     Bundle 'scrooloose/syntastic'
     Bundle 'vim-scripts/paredit.vim'
     Bundle 'gorkunov/smartpairs.vim'
+    Bundle 'tpope/vim-fireplace'
+    Bundle 'tpope/vim-classpath'
+    Bundle 'kien/ctrlp.vim'
+    Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 
   " Themes
     Bundle 'altercation/vim-colors-solarized'
@@ -51,11 +56,18 @@
     " Clojure
       Bundle 'vim-scripts/VimClojure'
 
+    " Haskell
+      Bundle 'lukerandall/haskellmode-vim'
+
   filetype on
 
 " BASICS
 
   set number
+  set relativenumber
+
+  let g:NumberToggleTrigger="<F2>"
+
   set ruler
   syntax on
 
@@ -107,14 +119,14 @@
   color Tomorrow-Night-Eighties
 
   " Disable <Arrow keys>
-  inoremap <Up> <NOP>
-  inoremap <Down> <NOP>
-  inoremap <Left> <NOP>
-  inoremap <Right> <NOP>
-  noremap <Up> <NOP>
-  noremap <Down> <NOP>
-  noremap <Left> <NOP>
-  noremap <Right> <NOP>
+  " inoremap <Up> <NOP>
+  " inoremap <Down> <NOP>
+  " inoremap <Left> <NOP>
+  " inoremap <Right> <NOP>
+  " noremap <Up> <NOP>
+  " noremap <Down> <NOP>
+  " noremap <Left> <NOP>
+  " noremap <Right> <NOP>
 
   " Ability to move with pressed Ctrl key
   imap <C-h> <C-o>h
@@ -176,6 +188,7 @@
 
   " NERDTree configuration
   let NERDTreeIgnore=['\.rbc$', '\~$']
+  let g:NERDTreeDirArrows=0
 
   " Command-T configuration
   let g:CommandTMaxHeight=10
@@ -202,3 +215,15 @@
 
   let g:paredit_mode=1
 
+function TrimEndLines()
+    let save_cursor = getpos(".")
+    :silent! %s#\($\n\s*\)\+\%$##
+    call setpos('.', save_cursor)
+endfunction
+
+function RemoveTrailingSpaces()
+    :%s/\s\+$//e
+endfunction
+
+au BufWritePre * call TrimEndLines()
+au BufWritePre * call RemoveTrailingSpaces()
