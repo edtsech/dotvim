@@ -32,6 +32,9 @@
     Bundle 'tpope/vim-classpath'
     Bundle 'kien/ctrlp.vim'
     Bundle 'jeffkreeftmeijer/vim-numbertoggle'
+    Bundle 'terryma/vim-multiple-cursors'
+    Bundle 'myusuf3/numbers.vim'
+    Bundle 'Lokaltog/vim-easymotion'
 
   " Themes
     Bundle 'altercation/vim-colors-solarized'
@@ -60,6 +63,7 @@
       Bundle 'lukerandall/haskellmode-vim'
 
   filetype on
+
 
 " BASICS
 
@@ -151,24 +155,21 @@
 
 " SHORTCUTS
 
-  " Save file
-  nmap <Leader>s :w <cr>
-
   " Open .vimrc in a new tab
   nmap <Leader>vc :tabedit $MYVIMRC<CR>
 
   " Create splits
   nmap <Leader>v :vsplit <cr>
-  nmap <Leader>h :split <cr>
+  nmap <Leader>s :split <cr>
 
   " Clear highlight
   nnoremap <Leader>c :nohls<CR><C-L>
 
   " Navigate between splits
-  map <C-h> <C-w>h
-  map <C-j> <C-w>j
-  map <C-k> <C-w>k
-  map <C-l> <C-w>l
+  map <Leader>h <C-w>h
+  map <Leader>j <C-w>j
+  map <Leader>k <C-w>k
+  map <Leader>l <C-w>l
 
   " Toggle relativenumber option
   map <Leader>n :set relativenumber<CR>
@@ -178,9 +179,12 @@
   map <leader>ts :%s/\s\+$//e<CR>
 
 " PLUGINS
+  let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']
+  let g:EasyMotion_leader_key = '<leader>'
 
   " Search work under cursor with Ack
-  noremap <Leader>a :Ack <cword><CR>
+  noremap <Leader>aw :Ack <cword><CR>
+  noremap <Leader>a :Ack
 
   " Cmd+D map to toggle NERDTree
   imap <Leader>d :NERDTreeToggle<CR>
