@@ -15,7 +15,6 @@
     Bundle 'markabe/bufexplorer'
     Bundle 'mileszs/ack.vim'
     Bundle 'wycats/nerdtree'
-    Bundle 'git://git.wincent.com/command-t.git'
     " Bundle 'git://bitbucket.org/ns9tks/vim-fuzzyfinder.git'
     Bundle 'tpope/vim-endwise'
     Bundle 'ervandew/supertab'
@@ -35,6 +34,7 @@
     Bundle 'terryma/vim-multiple-cursors'
     Bundle 'myusuf3/numbers.vim'
     Bundle 'Lokaltog/vim-easymotion'
+    Bundle 'bling/vim-airline'
 
   " Themes
     Bundle 'altercation/vim-colors-solarized'
@@ -68,7 +68,6 @@
 " BASICS
 
   set number
-  set relativenumber
 
   let g:NumberToggleTrigger="<F2>"
 
@@ -155,6 +154,9 @@
 
 " SHORTCUTS
 
+  " ESC
+  imap <Leader>q <Esc>
+
   " Open .vimrc in a new tab
   nmap <Leader>vc :tabedit $MYVIMRC<CR>
 
@@ -166,19 +168,21 @@
   nnoremap <Leader>c :nohls<CR><C-L>
 
   " Navigate between splits
+  " Colemak version
   map <Leader>h <C-w>h
-  map <Leader>j <C-w>j
-  map <Leader>k <C-w>k
-  map <Leader>l <C-w>l
-
-  " Toggle relativenumber option
-  map <Leader>n :set relativenumber<CR>
-  map <Leader>N :set number<CR>
+  map <Leader>n <C-w>j
+  map <Leader>e <C-w>k
+  map <Leader>i <C-w>l
 
   " Fix Trailing White Space
   map <leader>ts :%s/\s\+$//e<CR>
 
 " PLUGINS
+
+  " Airline
+  let g:airline_left_sep = ''
+  let g:airline_right_sep = ''
+
   let g:numbers_exclude = ['tagbar', 'gundo', 'minibufexpl', 'nerdtree']
   let g:EasyMotion_leader_key = '<leader>'
 
@@ -193,10 +197,6 @@
   " NERDTree configuration
   let NERDTreeIgnore=['\.rbc$', '\~$']
   let g:NERDTreeDirArrows=0
-
-  " Command-T configuration
-  let g:CommandTMaxHeight=10
-  map <D-e> :CommandT<CR>
 
   " Show syntax highlighting groups for word under cursor
   nmap <C-S-P> :call <SID>SynStack()<CR>

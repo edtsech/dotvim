@@ -6,6 +6,3 @@
  set guioptions-=l
  set guioptions-=R
  set guioptions-=r
-
-" Map CommandT
- nmap <Leader>e :CommandT <cr>
