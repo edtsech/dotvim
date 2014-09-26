@@ -11,11 +11,9 @@
   Bundle 'gmarik/vundle'
 
   " Vim
-    " Bundle 'Lokaltog/vim-powerline'
     Bundle 'markabe/bufexplorer'
     Bundle 'mileszs/ack.vim'
     Bundle 'wycats/nerdtree'
-    " Bundle 'git://bitbucket.org/ns9tks/vim-fuzzyfinder.git'
     Bundle 'tpope/vim-endwise'
     Bundle 'ervandew/supertab'
     Bundle 'tpope/vim-surround'
@@ -173,6 +171,9 @@
   map <Leader>n <C-w>j
   map <Leader>e <C-w>k
   map <Leader>i <C-w>l
+
+  " CtrlP
+  map <Leader>p <C-p>
 
   " Fix Trailing White Space
   map <leader>ts :%s/\s\+$//e<CR>
