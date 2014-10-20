@@ -33,6 +33,8 @@
     Bundle 'myusuf3/numbers.vim'
     Bundle 'Lokaltog/vim-easymotion'
     Bundle 'bling/vim-airline'
+    Bundle 'mhinz/vim-startify'
+    Bundle 'MattesGroeger/vim-bookmarks'
 
   " Themes
     Bundle 'altercation/vim-colors-solarized'
@@ -179,6 +181,7 @@
   map <leader>ts :%s/\s\+$//e<CR>
 
 " PLUGINS
+"
 
   " Airline
   let g:airline_left_sep = ''
